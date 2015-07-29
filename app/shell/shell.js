@@ -1,0 +1,27 @@
+(function () {
+    'use strict';
+
+    angular
+        .module('shell', []);
+
+    angular
+        .module('shell')
+        .config(function ($stateProvider) {
+
+            $stateProvider.state('shell', {
+                url: '',
+                views: {
+                    '': {
+                        templateUrl: 'shell/templates/shell.html',
+                        controller: 'shellController',
+                        controllerAs: 'vm'
+                    },
+                    'navView@shell': {
+                        templateUrl: 'nav/templates/nav.template.html'
+                    }
+                }
+            });
+            /* Add New States Above */
+
+        });
+})();
