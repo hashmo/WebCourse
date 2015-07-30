@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    angular.module('app', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'angular-loading-bar', 'shell', 'home', 'help', 'common', 'nav', 'auth', 'ui.grid', 'schemaForm']);
+    angular.module('app', ['ui.bootstrap', 'ui.utils', 'ui.router', 'ngAnimate', 'angular-loading-bar', 'shell', 'home', 'help', 'common', 'nav', 'auth', 'ui.grid', 'schemaForm', 'ngAnimate', 'toastr']);
 
     // CONFIG: App (module)
     angular

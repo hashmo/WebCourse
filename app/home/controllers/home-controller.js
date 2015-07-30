@@ -6,15 +6,25 @@
     /**
      * HomeController Object/function
      */
-    function HomeController(homeService) {
-
+    function HomeController(homeService, logger, data, toastr) {
+        
+        logger.log('Home controller - Loaded');
+        
+        data.getData('/data/data.json')
+            .then( function(data) {
+                vm.model.data = data;
+        })
+            .catch( function(data) {
+                toastr.error('Could not get data');
+               logger.log('Error!!!'); 
+        });
+        
         // vm (view-model) is the object we bind to (this controller).
         var vm = this;
         
         vm.model = { 
-            data: 
-    [{first: 'Matan', last: 'Hashmonay' },
-     {first: 'Hadar', last: 'Yaari' }]};
+            data: []
+    };
         
           vm.schema = {
     type: "object",
